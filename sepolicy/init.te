@@ -16,4 +16,6 @@ allow init system_server:binder call;
 allow init vendor_toolbox_exec:file execute_no_trans;
 allow init sysfs:file { open setattr };
 allow init vendor_file:file execute_no_trans;
+allow init self:capability sys_nice;
+allow init sysfs_battery_supply:file setattr;
 set_prop(init, wcnss_prop)
