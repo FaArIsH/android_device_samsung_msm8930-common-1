@@ -1,12 +1,9 @@
-type hal_allocator_default, domain, coredomain;
-hal_server_domain(hal_allocator_default, hal_allocator)
-
-type hal_allocator_default_exec, exec_type, file_type;
-init_daemon_domain(hal_allocator_default)
+#type hal_allocator_default, domain;
+# hal_server_domain(hal_allocator_default, hal_allocator)
 
 allow hal_memtrack_default debugfs:file { getattr open read };
-allow hal_memtrack_default hal_allocator_default:dir search;
-allow hal_memtrack_default hal_allocator_default:file { getattr open };
+#allow hal_memtrack_default hal_allocator_default:dir search;
+#allow hal_memtrack_default hal_allocator_default:file { getattr open };
 allow hal_memtrack_default hal_configstore_default:dir search;
 allow hal_memtrack_default hal_configstore_default:file open;
 allow hal_memtrack_default hwservicemanager:dir search;

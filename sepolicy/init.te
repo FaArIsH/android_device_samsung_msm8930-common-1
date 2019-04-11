@@ -14,5 +14,6 @@ allow init sysfs_devices_system_cpu:file write;
 allow init sysfs_lowmemorykiller:file { open write };
 allow init system_server:binder call;
 allow init vendor_toolbox_exec:file execute_no_trans;
+allow init sysfs:file { open setattr };
+allow init vendor_file:file execute_no_trans;
 set_prop(init, wcnss_prop)
-
