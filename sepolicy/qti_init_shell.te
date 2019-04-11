@@ -3,6 +3,9 @@ allow qti_init_shell apk_data_file:dir rw_dir_perms;
 allow qti_init_shell apk_data_file:file rw_file_perms;
 
 # For bluetooth mac address loading
+type bluetooth_loader, domain;
+type bluetooth_loader_exec, exec_type, file_type;
+
 allow qti_init_shell bluetooth_efs_file:dir search;
 allow qti_init_shell bluetooth_efs_file:file r_file_perms;
 allow qti_init_shell bluetooth_loader_exec:file r_file_perms;
