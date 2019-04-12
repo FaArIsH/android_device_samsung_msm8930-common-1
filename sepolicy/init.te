@@ -18,4 +18,9 @@ allow init sysfs:file { open setattr };
 allow init vendor_file:file execute_no_trans;
 allow init self:capability sys_nice;
 allow init sysfs_battery_supply:file setattr;
+allow init sysfs_thermal:file write;
+allow init self:netlink_kobject_uevent_socket create;
+allow init socket_device:sock_file create;
+allow init self:netlink_kobject_uevent_socket setopt;
+allow init socket_device:sock_file setattr;
 set_prop(init, wcnss_prop)

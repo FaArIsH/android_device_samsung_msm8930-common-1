@@ -1,5 +1,4 @@
-#type storaged, domain, coredomain, mlstrustedsubject;
+type storaged, domain, coredomain, mlstrustedsubject;
 #type storaged_exec, exec_type, file_type;
 
-#allow storaged sysfs:file { getattr open read };
-#allow storaged sysfs:file read;
+allow storaged sysfs:file { getattr open read };

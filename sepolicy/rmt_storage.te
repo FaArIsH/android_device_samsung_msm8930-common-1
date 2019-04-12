@@ -14,3 +14,4 @@ allow rmt_storage system_file:file execute_no_trans;
 allow rmt_storage uio_device:chr_file rw_file_perms;
 allow rmt_storage sysfs:dir { open read};
 allow rmt_storage sysfs:file { open read getattr };
+allow rmt_storage block_device:blk_file { open read write };

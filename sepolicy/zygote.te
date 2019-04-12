@@ -1,2 +1,4 @@
 allow zygote self:capability sys_nice;
 allow zygote proc_cmdline:file read;
+allow zygote proc_cmdline:file open;
+allow zygote proc_cmdline:file getattr;

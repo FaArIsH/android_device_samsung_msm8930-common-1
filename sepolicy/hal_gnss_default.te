@@ -4,3 +4,6 @@ allow hal_gnss_default qmuxd_socket:sock_file { create setattr write };
 allow hal_gnss_default sysfs:file read;
 allow hal_gnss_default qmuxd_socket:dir search;
 allow hal_gnss_default sysfs:file open;
+allow hal_gnss_default qmuxd:unix_stream_socket connectto;
+allow hal_gnss_default qmuxd_socket:dir remove_name;
+allow hal_gnss_default sysfs:file getattr;

@@ -4,3 +4,5 @@ allow ueventd vfat:dir search;
 allow ueventd vfat:file { open read getattr };
 allow ueventd exfat:dir search;
 allow ueventd exfat:file read;
+allow ueventd exfat:file open;
+allow ueventd exfat:file getattr;

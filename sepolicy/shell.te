@@ -22,3 +22,4 @@ allow shell vfat:dir create_dir_perms;
 allow shell vfat:file create_file_perms;
 
 ####allow shell self:capability sys_module;
+allow shell kernel:system syslog_read;
