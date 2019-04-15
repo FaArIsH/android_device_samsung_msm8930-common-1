@@ -10,3 +10,6 @@ allow mm-qcamerad system_data_file:sock_file create_file_perms;
 allow mm-qcamerad system_file:file execmod;
 allow mm-qcamerad vendor_file:file execmod;
 allow mm-qcamerad sysfs:file { open read getattr };
+allow mm-qcamerad audio_device:chr_file { ioctl open read write };
+allow mm-qcamerad audio_device:dir search;
+allow mm-qcamerad camera_socket:sock_file { create unlink };

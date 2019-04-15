@@ -19,3 +19,4 @@ wakelock_use(qmux)
 allow qmuxd system_file:file execmod;
 allow qmuxd diag_device:chr_file { read write };
 allow qmuxd diag_device:chr_file open;
+allow qmuxd self:capability dac_override;
