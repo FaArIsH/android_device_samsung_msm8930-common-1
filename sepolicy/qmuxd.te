@@ -1,5 +1,5 @@
 # Qualcomm Management Interface Multiplexer
-#type qmux, domain, domain_deprecated;
+# type qmux, domain, domain_deprecated;
 type qmux, domain;
 type qmux_exec, exec_type, file_type;
 
@@ -17,3 +17,6 @@ allow qmux radio_device:chr_file rw_file_perms;
 wakelock_use(qmux)
 
 allow qmuxd system_file:file execmod;
+allow qmuxd diag_device:chr_file { read write };
+allow qmuxd diag_device:chr_file open;
+allow qmuxd self:capability dac_override;

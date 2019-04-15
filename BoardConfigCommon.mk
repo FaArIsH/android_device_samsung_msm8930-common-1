@@ -89,7 +89,9 @@ WIFI_DRIVER_FW_PATH_AP           := "ap"
 # Move wcnss_service to vendor
 PRODUCT_VENDOR_MOVE_ENABLED := true
 
+# We modify several neverallows, so let the build proceed
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # Include SE policies
 include device/qcom/sepolicy/sepolicy.mk
-include device/qcom/sepolicy/legacy-sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy

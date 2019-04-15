@@ -1,0 +1,2 @@
+allow hwservicemanager init:file open;
+allow hwservicemanager init:process getattr;

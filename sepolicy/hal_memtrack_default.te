@@ -1,0 +1,31 @@
+#type hal_allocator_default, domain;
+# hal_server_domain(hal_allocator_default, hal_allocator)
+
+allow hal_memtrack_default debugfs:file { getattr open read };
+#allow hal_memtrack_default hal_allocator_default:dir search;
+#allow hal_memtrack_default hal_allocator_default:file { getattr open };
+allow hal_memtrack_default hal_configstore_default:dir search;
+allow hal_memtrack_default hal_configstore_default:file open;
+allow hal_memtrack_default hwservicemanager:dir search;
+allow hal_memtrack_default hwservicemanager:file open;
+allow hal_memtrack_default init:dir search;
+allow hal_memtrack_default init:file { getattr open };
+allow hal_memtrack_default servicemanager:file { getattr open };
+allow hal_memtrack_default system_app:dir search;
+allow hal_memtrack_default system_app:file { getattr open };
+allow hal_memtrack_default wcnss_service:dir search;
+allow hal_memtrack_default wcnss_service:file { getattr open };
+allow hal_memtrack_default hal_configstore_default:file getattr;
+allow hal_memtrack_default hal_keymaster_default:dir search;
+allow hal_memtrack_default hal_keymaster_default:file { getattr open };
+allow hal_memtrack_default hal_light_default:dir search;
+allow hal_memtrack_default hal_usb_default:dir search;
+allow hal_memtrack_default hal_usb_default:file { getattr open };
+allow hal_memtrack_default hal_vibrator_default:dir search;
+allow hal_memtrack_default hal_vibrator_default:file open;
+allow hal_memtrack_default hwservicemanager:file getattr;
+allow hal_memtrack_default servicemanager:dir search;
+allow hal_memtrack_default thermalserviced:dir search;
+allow hal_memtrack_default thermalserviced:file { getattr open };
+allow hal_memtrack_default vndservicemanager:dir search;
+allow hal_memtrack_default vndservicemanager:file { getattr open };

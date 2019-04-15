@@ -1,3 +1,6 @@
 allow fsck efs_block_device:blk_file rw_file_perms;
 #allow fsck block_device:blk_file { read write }; 
 allow fsck self:capability dac_override;
+allow fsck block_device:blk_file { read write };
+allow fsck block_device:blk_file open;
+allow fsck block_device:blk_file ioctl;
